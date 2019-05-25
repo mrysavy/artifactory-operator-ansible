@@ -1,5 +1,5 @@
 ---
-- version: v1
-  group: workshops.operator.redhatgov.io
-  kind: Workshop
-  role: /opt/ansible/roles/workshop
+- group: operator.k8s.trask.cz
+  kind: ArtifactoryProInstance
+  version: v1
+  role: /opt/ansible/roles/artifactory-pro

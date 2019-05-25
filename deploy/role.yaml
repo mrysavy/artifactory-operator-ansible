@@ -2,7 +2,7 @@ apiVersion: rbac.authorization.k8s.io/v1
 kind: Role
 metadata:
   creationTimestamp: null
-  name: workshop-operator
+  name: artifactory-operator
 rules:
 - apiGroups:
   - ""
@@ -35,13 +35,13 @@ rules:
 - apiGroups:
   - apps
   resourceNames:
-  - workshop-operator
+  - artifactory-operator
   resources:
   - deployments/finalizers
   verbs:
   - update
 - apiGroups:
-  - workshops.operator.redhatgov.io
+  - operator.k8s.trask.cz
   resources:
   - '*'
   verbs:
