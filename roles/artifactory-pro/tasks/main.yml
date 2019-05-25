@@ -1,8 +1,7 @@
 ---
-# tasks file for workshop
-- name: Create project for global workshop content
+- name: Test
   k8s:
     api_version: v1
-    kind: Namespace
-    name: "{{ meta.name }}"
-
+    kind: ConfigMap
+    metadata:
+        name: "{{ meta.name }}"

@@ -1,0 +1,20 @@
+apiVersion: build.openshift.io/v1
+kind: BuildConfig
+metadata:
+  name: artifactory-operator
+spec:
+  source:
+    git:
+      ref: master
+      uri: https://github.com/mrysavy/artifactory-operator.git
+    type: Git
+  output:
+    to:
+      kind: ImageStreamTag
+      name: artifactory-operator:latest
+  strategy:
+    type: Docker
+    dockerStrategy:
+      dockerfilePath: build/Dockerfile
+      forcePull: true
+      noCache: true

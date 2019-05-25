@@ -1,7 +1,0 @@
-apiVersion: workshops.operator.redhatgov.io/v1
-kind: Workshop
-metadata:
-  name: example-workshop
-spec:
-  # Add fields here
-  size: 3
