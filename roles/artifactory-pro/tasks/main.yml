@@ -1,7 +1,7 @@
 ---
 - name: Debug
   debug:
-    msg: "{{ vars | to_json }}"
+    msg: "{{ vars }}"
 - name: Test
   k8s:
     api_version: v1
