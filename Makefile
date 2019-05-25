@@ -12,3 +12,7 @@ deploy_operator:
 deploy_build_oc:
 	@oc apply -f deploy/build_oc/image_stream.yaml
 	@oc apply -f deploy/build_oc/build_config.yaml
+
+rebuild_oc:
+	@oc start-build artifactory-operator -w
+	@oc delete pod -l name=artifactory-operator --force --grace-period=0
